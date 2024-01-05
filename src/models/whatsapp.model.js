@@ -22,11 +22,13 @@ class Whatsapp extends Automatize {
     
     await this.byCharMessage(contact);
 
-    await this.page.keyboard.sendCharacter("Enter");
+    await this.page.keyboard.press("Enter");
+
+    await this.sleeper(1000);
 
     await this.byCharMessage(text);
 
-    await this.page.keyboard.sendCharacter("Enter");
+    await this.page.keyboard.press("Enter");
   }
 
   async byCharMessage(text) {

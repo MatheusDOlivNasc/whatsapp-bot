@@ -16,7 +16,7 @@ async function sendMessage(formData) {
       console.log('await login')
       await w.awaitLogin();
       console.log('init search')
-      await w.search(formData.contact, formData.text);
+      await w.search(formData.contact, formData.message);
 
       return res("deu certo");
     } catch (error) {
