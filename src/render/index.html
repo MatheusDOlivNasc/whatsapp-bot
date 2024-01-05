@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
   <link rel="stylesheet" href="style.css">
-  <title>Oiee!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>Whatsapp Desktop Bot!</title>
 </head>
+
 <body>
-  <h1>Envie mensagem para o WhatsApp!</h1>
-  <button type="button" id="button-search">Abrir WhatsApp e pesquisar</button>
-  <input type="text" name="search" id="search">
-  <div id="loading"></div>
+  <div class="container">
+    <h1>Envie mensagens pelo WhatsApp!</h1>
+    <input placeholder="Insira o nome do contato" type="text" name="contact" id="contact">
+    <p class="info">O contato já deve estar na sua lista</p>
+    <textarea placeholder="Insira sua mensagem" type="text" name="message" id="message" rows="10"></textarea>
+    <div class="buttons">
+      <button type="button" class="button" id="button-search">Enviar</button>
+    </div>
+    <p class="info">Fique atento, pois após clicar em enviar será necessário habilitar o QRCode com seu celular</p>
+    <div id="loading"></div>
+  </div>
   <script src="app.js"></script>
 </body>
+
 </html>
